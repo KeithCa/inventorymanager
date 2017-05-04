@@ -24,6 +24,8 @@ public class SessionManager
 
     private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
 
+    public static String cname = "";
+
     public SessionManager(Context context)
     {
         this._context = context;
@@ -40,6 +42,8 @@ public class SessionManager
 
         Log.d(TAG, "User login session modified!");
     }
+
+
 
     public boolean isLoggedIn()
     {

@@ -71,67 +71,6 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="#ACACAC"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <customfonts.MyTextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Supplier"
-            android:textSize="14dp"
-            android:padding="20dp"
-            android:layout_marginLeft="15dp"/>
-
-
-        <customfonts.MyTextView
-            android:id="@+id/result_supplier"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:background="#00000000"
-            android:padding="20dp"/>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="#ACACAC"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <customfonts.MyTextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="Offer"
-            android:textSize="14dp"
-            android:padding="20dp"
-            android:layout_marginLeft="15dp"/>
-
-
-        <customfonts.MyTextView
-            android:id="@+id/result_offer"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:background="#00000000"
-            android:padding="20dp"/>
-    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -154,7 +93,7 @@
             android:layout_marginLeft="15dp"/>
 
 
-        <customfonts.MyTextView
+        <customfonts.MyEditText
             android:id="@+id/result_price"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -185,7 +124,7 @@
             android:layout_marginLeft="15dp"/>
 
 
-        <customfonts.MyTextView
+        <EditText
             android:id="@+id/result_stock"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -209,11 +148,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/inv_add"
+            android:id="@+id/inv_sell"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add"
+            android:text="Sell"
             android:textSize="16dp"
             android:textColor="#3D70E8"
             android:textAlignment="center"
@@ -222,26 +161,6 @@
             android:layout_marginRight="0dp"
             android:padding="10dp"
             android:layout_marginTop="30dp" />
-
-        <Button
-            android:id="@+id/inv_sell"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Sell"
-            android:textColor="#3D70E8"
-            android:textSize="16dp"
-            android:textAlignment="center"
-            android:background="@drawable/border"
-            android:layout_marginRight="45dp"
-            android:layout_marginLeft="30dp"
-            android:padding="10dp"
-            android:visibility="invisible"
-            android:layout_marginTop="30dp" />
-
-
-
-
 
 
     </LinearLayout>

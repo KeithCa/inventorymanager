@@ -8,6 +8,7 @@ import helper.SessionManager;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -133,11 +134,34 @@ public class Activity_Login extends Activity
                             JSONObject user = jObj.getJSONObject("user");
                             String name = user.getString("name");
                             String email = user.getString("email");
-                            String created_at = user
-                                    .getString("created_at");
+                            session.cname = user.getString("company");
 
-                            // Inserting row in users table
-                            db.addUser(name, email, uid, created_at);
+                            String notes = jObj.getString("inventory");
+                            JSONArray inv = new JSONArray(notes);
+                            for(int i =0;i< inv.length();i++) {
+                                JSONObject c = inv.getJSONObject(i);
+                                String title = c.getString("title");
+                                String ean = c.getString("ean");
+                                String supplier = c.getString("supplier");
+                                String offer = c.getString("offer");
+                                String price = c.getString("price");
+                                String stock = c.getString("stock");
+                                String reorder = c.getString("reorder");
+                                db.storeInv(title, ean, supplier, offer, price, stock, reorder);
+                            }
+                            String sales = jObj.getString("sale");
+                            JSONArray sale = new JSONArray(sales);
+                            for(int i =0;i< sale.length();i++) {
+                                JSONObject c = sale.getJSONObject(i);
+                                String title = c.getString("title");
+                                String ean = c.getString("ean");
+                                String datesold = c.getString("datesold");
+                                String price = c.getString("price");
+                                Integer stock = c.getInt("stock");
+                                db.addSales(title, ean, price, datesold, stock);
+                            }
+
+
 
                             // Launch main activity
                             Intent intent = new Intent(Activity_Login.this,
